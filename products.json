@@ -1,0 +1,10 @@
+[
+  { "id": "coin-1M",   "name": "1.000.000 Koin Server",       "price": 5000 },
+  { "id": "coin-5M",   "name": "5.000.000 Koin Server",        "price": 12000 },
+  { "id": "sword-ench", "name": "Diamond Sword Enchanted",   "price": 25000 },
+  { "id": "armor-full", "name": "Netherite Full Armor Set",  "price": 8000 },
+  { "id": "elytra-fw",  "name": "Elytra + Firework Bundle",  "price": 12000 },
+  { "id": "rank-vip",   "name": "Rank VIP - selamanya",        "price": 20000 },
+  { "id": "rank-mvp",   "name": "Rank MVP+ Selamanya",       "price": 30000 },
+  { "id": "apple-64",   "name": "Golden Apple Stack (64x)",  "price": 30000 }
+]

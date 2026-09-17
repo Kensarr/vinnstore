@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — CRYSMP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-icon pixel-icon" data-icon="chest" data-size="34"></span>
+      <span class="brand-text">CRY<br><em>SMP</em></span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Kembali Belanja</a>
+    </nav>
+  </div>
+</header>
+
+<section class="checkout-section">
+  <div class="wrap">
+
+    <div class="checkout-steps" aria-hidden="true">
+      <span class="cstep done">1. Keranjang</span>
+      <span class="cstep-arrow">›</span>
+      <span class="cstep active">2. Checkout</span>
+      <span class="cstep-arrow">›</span>
+      <span class="cstep">3. Selesai</span>
+    </div>
+
+    <!-- ===== CHECKOUT FORM VIEW ===== -->
+    <div class="checkout-grid" id="checkoutView">
+      <form class="checkout-form" id="checkoutForm">
+        <div class="form-panel">
+          <h2 class="panel-title">Data Pembeli</h2>
+          <label class="field">
+            <span>Username Minecraft</span>
+            <input type="text" id="mcUsername" placeholder="Contoh: CrySMP (Tambah . untuk Bedrock)" required>
+          </label>
+          <label class="field">
+            <span>Email</span>
+            <input type="email" id="buyerEmail" placeholder="nama@email.com" required>
+          </label>
+          <label class="field">
+            <span>Server Tujuan</span>
+            <select id="serverTarget" required>
+              <option value="" disabled selected>Pilih server</option>
+              <option>Eco CPVP</option>
+              <option>Eco Survival</option>
+              <option>Coming Soon</option>
+              <option>Lainnya</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="form-panel">
+          <h2 class="panel-title">Metode Pembayaran</h2>
+          <div class="pay-options">
+            <label class="pay-card">
+              <input type="radio" name="payment" value="transfer" checked>
+              <span class="pay-icon">🏦</span>
+              <span>Transfer Bank</span>
+            </label>
+            <label class="pay-card">
+              <input type="radio" name="payment" value="ewallet">
+              <span class="pay-icon">📱</span>
+              <span>E-Wallet</span>
+            </label>
+            <label class="pay-card">
+              <input type="radio" name="payment" value="qris">
+              <span class="pay-icon">🔳</span>
+              <span>QRIS</span>
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-emerald checkout-submit">Konfirmasi &amp; Bayar</button>
+      </form>
+
+      <aside class="order-summary">
+        <h2 class="panel-title">Ringkasan Pesanan</h2>
+        <div class="summary-items" id="summaryItems"><!-- filled by script.js --></div>
+        <div class="summary-row"><span>Subtotal</span><span id="summarySubtotal">Rp 0</span></div>
+        <div class="summary-row"><span>Biaya Layanan</span><span id="summaryFee">Rp 0</span></div>
+        <div class="summary-row total"><span>Total</span><span id="summaryTotal">Rp 0</span></div>
+      </aside>
+    </div>
+
+    <!-- ===== PROCESSING / WAITING FOR PAYMENT CONFIRMATION ===== -->
+    <div class="processing-view" id="processingView" hidden>
+      <span class="pixel-icon spin-icon" data-icon="diamond" data-size="80"></span>
+      <h2>Menunggu Konfirmasi Pembayaran</h2>
+      <p>Kode pesanan: <strong id="processingOrderCode">—</strong></p>
+      <p class="success-sub">Halaman ini memeriksa status pembayaran kamu secara berkala. Jangan tutup tab ini sampai statusnya berubah.</p>
+    </div>
+
+    <!-- ===== SUCCESS VIEW ===== -->
+    <div class="success-view" id="successView" hidden>
+      <span class="pixel-icon" data-icon="star" data-size="90"></span>
+      <h2>Pesanan Diterima!</h2>
+      <p>Kode pesanan kamu: <strong id="orderCode">—</strong></p>
+      <p class="success-sub">Penjual akan mengirim pesanan ke akun <strong id="successUsername">—</strong> dalam beberapa menit. Konfirmasi dikirim ke email kamu.</p>
+      <p class="demo-banner" id="demoModeBanner" hidden>⚠ Mode demo — backend pembayaran belum tersambung, ini bukan transaksi sungguhan.</p>
+      <a href="index.html" class="btn btn-emerald">Kembali ke Beranda</a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="pixel-icon" data-icon="chest" data-size="30"></span>
+      <span class="brand-text">CRY<br><em>SMP</em></span>
+    </div>
+    <p class="footer-note">Template desain marketplace — checkout ini demo front-end saja, belum tersambung payment gateway sungguhan.</p>
+    <p class="footer-copy">© <span id="year"></span> CRYSMP.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="checkout-payment.js"></script>
+</body>
+</html>

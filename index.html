@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CrySMP Store — Marketplace Money &amp; Item Server</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-icon pixel-icon" data-icon="chest" data-size="34"></span>
+      <span class="brand-text">CRY<br><em>SMP</em></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#kategori">Kategori</a>
+      <a href="#produk">Produk</a>
+      <a href="#cara-kerja">Cara Kerja</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <button class="cart-btn" id="cartBtn" aria-label="Buka keranjang">
+      <span class="pixel-icon" data-icon="chest" data-size="22"></span>
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+
+    <button class="burger" id="burgerBtn" aria-label="Buka menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <span class="badge-live"><span class="dot"></span> 214 TRANSAKSI HARI INI</span>
+      <h1 class="hero-title">TOP UP MONEY.<br>KLAIM ITEM.<br><span class="hl">MASUK GAME.</span></h1>
+      <p class="hero-sub">Marketplace Money server, gear, rank, dan item Minecraft — dikirim ke inventory kamu dalam hitungan menit. Semua penjual terverifikasi, semua transaksi tercatat.</p>
+      <div class="hero-cta">
+        <a href="#produk" class="btn btn-emerald">Lihat Produk</a>
+        <a href="#cara-kerja" class="btn btn-outline">Cara Belanja</a>
+      </div>
+      <ul class="hero-stats">
+        <li><strong>1.2K+</strong><span>Item terjual</span></li>
+        <li><strong>4.9/5</strong><span>Rating pembeli</span></li>
+        <li><strong>&lt;10mnt</strong><span>Rata-rata kirim</span></li>
+      </ul>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <div class="float-block fb-1 pixel-icon" data-icon="diamond" data-size="120"></div>
+      <div class="float-block fb-2 pixel-icon" data-icon="coin" data-size="90"></div>
+      <div class="float-block fb-3 pixel-icon" data-icon="sword" data-size="100"></div>
+      <div class="float-block fb-4 pixel-icon" data-icon="star" data-size="70"></div>
+      <div class="hero-platform"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TICKER ===== -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>PEMBAYARAN AMAN ✦ PENJUAL TERVERIFIKASI ✦ GARANSI KIRIM ULANG ✦ SUPPORT 24 JAM ✦ PEMBAYARAN AMAN ✦ PENJUAL TERVERIFIKASI ✦ GARANSI KIRIM ULANG ✦ SUPPORT 24 JAM ✦</span>
+    <span aria-hidden="true">PEMBAYARAN AMAN ✦ PENJUAL TERVERIFIKASI ✦ GARANSI KIRIM ULANG ✦ SUPPORT 24 JAM ✦ PEMBAYARAN AMAN ✦ PENJUAL TERVERIFIKASI ✦ GARANSI KIRIM ULANG ✦ SUPPORT 24 JAM ✦</span>
+  </div>
+</div>
+
+<!-- ===== CATEGORY TABS ===== -->
+<section class="category-section" id="kategori">
+  <div class="wrap">
+    <div class="tabs" id="categoryTabs">
+      <button class="tab active" data-filter="semua">Semua</button>
+      <button class="tab" data-filter="koin">Koin &amp; Uang</button>
+      <button class="tab" data-filter="item">Item &amp; Gear</button>
+      <button class="tab" data-filter="rank">Rank &amp; VIP</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRODUCTS ===== -->
+<section class="product-section" id="produk">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Etalase</span>
+      <h2>Produk Tersedia</h2>
+    </div>
+    <div class="product-grid" id="productGrid"><!-- filled by script.js --></div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="how-section" id="cara-kerja">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Panduan</span>
+      <h2>Tiga Langkah Belanja</h2>
+    </div>
+    <ol class="steps">
+      <li>
+        <span class="step-num">01</span>
+        <h3>Pilih &amp; Masukkan Keranjang</h3>
+        <p>Cari koin, item, atau rank yang kamu butuhkan, lalu tambahkan ke keranjang.</p>
+      </li>
+      <li>
+        <span class="step-num">02</span>
+        <h3>Isi Username &amp; Bayar</h3>
+        <p>Masukkan username Minecraft dan server tujuan, pilih metode pembayaran.</p>
+      </li>
+      <li>
+        <span class="step-num">03</span>
+        <h3>Terima di Inventory</h3>
+        <p>Penjual mengirim pesanan langsung ke akun kamu, biasanya di bawah 10 menit.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq-section" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Sering Ditanya</span>
+      <h2>FAQ</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>Apakah transaksinya aman?</summary>
+        <p>Setiap penjual melalui proses verifikasi, dan dana ditahan sistem sampai pesanan dikonfirmasi masuk ke akun kamu.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Server apa saja yang didukung?</summary>
+        <p>Sebagian besar server survival dan semi-vanilla populer. Cek ketersediaan server tujuan saat checkout.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Bagaimana kalau item tidak sampai?</summary>
+        <p>Ajukan klaim lewat halaman pesanan — tim kami akan menghubungi penjual atau memproses pengembalian dana.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CART DRAWER ===== -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Keranjang belanja">
+  <div class="cart-head">
+    <h3>Keranjang</h3>
+    <button class="cart-close" id="cartClose" aria-label="Tutup keranjang">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"><!-- filled by script.js --></div>
+  <div class="cart-empty" id="cartEmpty">
+    <span class="pixel-icon" data-icon="chest" data-size="56"></span>
+    <p>Keranjang masih kosong.</p>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total-row"><span>Total</span><strong id="cartTotal">Rp 0</strong></div>
+    <a href="checkout.html" class="btn btn-emerald cart-checkout-btn" id="checkoutLink">Lanjut ke Checkout</a>
+  </div>
+</aside>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="pixel-icon" data-icon="chest" data-size="30"></span>
+      <span class="brand-text">CRY<br><em>SMP</em></span>
+    </div>
+    <p class="footer-note">Template desain marketplace — nama produk &amp; harga contoh, bukan toko sungguhan. Bukan produk atau layanan resmi dari pengembang game manapun.</p>
+    <p class="footer-copy">© <span id="year"></span> CRYSMP.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
